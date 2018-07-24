@@ -178,6 +178,43 @@
         </dependencies>
     </dependencyManagement>
 
+
+    <repositories>
+        <repository>
+            <id>bootique-snapshots</id>
+            <url>http://maven.objectstyle.org/nexus/content/repositories/bootique-snapshots</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+
+        <!-- Main artifact repo -->
+        <repository>
+            <id>central</id>
+            <url>https://repo1.maven.org/maven2</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <!-- Contains artifacts that may not yet be available in Central-->
+        <repository>
+            <id>bintray-bootique</id>
+            <url>http://dl.bintray.com/bootique/releases</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
     <!-- Optional profile used to sign artifacts -->
     <profiles>
         <profile>
